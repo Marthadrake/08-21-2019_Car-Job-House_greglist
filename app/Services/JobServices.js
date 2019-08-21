@@ -1,11 +1,13 @@
 import Job from "../Models/Job.js";
 
+//added after data in job.js
+//go to controller draw the state
 let _state = {
-  jobs: [new Job({
+  Jobs: [new Job({
     career: "Web Design",
     salary: 0,
-    location: "Boston"
-    imgUrl: "Crowdz.io"
+    location: "Boston",
+    imgUrl: "https://crowdz.io",
     discription: "s"
   })]
 }
