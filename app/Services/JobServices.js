@@ -1,4 +1,4 @@
-
+import Job from "../Models/Job.js";
 
 
 export default class JobServices {

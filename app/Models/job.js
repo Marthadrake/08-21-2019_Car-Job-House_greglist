@@ -1,8 +1,10 @@
 
 
-export default class job {
-  constructor(data) {
-    console.log("hello I work")
+export default class Job {
+  contructor(){
+    console.log( "hello from cars")
   }
+
 }
+
 
