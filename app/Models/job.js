@@ -17,7 +17,7 @@ export default class Job {
         <img src="${this.imgUrl}" alt="">
           <h3>${this.location}</h3>
           <p>${this.description}</p>
-          <button class="btn btn-danger" onclick="app.controllers.JobControllers.deleteJob('${this._id}')">Delete Job</button>
+          <button class="btn btn-danger" onclick="app.controllers.JobControllers.deleteJob(${this._id})">Delete Job</button>
       </div>
   `
   }

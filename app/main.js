@@ -1,4 +1,4 @@
-import JobControllers from "./Controllers/JobControllers.js";
+import JobControllers from "./controllers/JobControllers.js";
 
 
 class App {

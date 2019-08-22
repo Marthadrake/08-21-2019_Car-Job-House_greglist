@@ -14,26 +14,26 @@ let _state = {
 
 export default class JobServices {
   deleteJob(id) {
-    _state.jobs.forEach(job, i) => {
+    _state.jobs.forEach((job, i) => {
       if (job._id == id) {
         _state.jobs.splice(i, 1)
       }
+    })
+  }
 
-    })
+  addJob(newJob) {
+    _state.jobs.push(new Job(newJob))
+    console.log(_state.jobs)
   }
-    
-    addJob(newJob){
-      _state.jobs.push(new Job(newJob))
-      console.log(_state.jobs)
-    }
-    constructor(){
-      console.log("hello from service")
-      console.log(_state.jobs)
-      
-    }
-    
-    get JobServices({
-      return _state.jobs.map(job => new Job(job))
-    })
+  constructor() {
+    console.log("hello from service")
+    console.log(_state.jobs)
+
   }
+
+  get JobServices() {
+    return _state.jobs.map(job => new Job(job))
+
+  }
+
 }
