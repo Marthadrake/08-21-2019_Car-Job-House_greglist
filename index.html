@@ -16,35 +16,37 @@
     <div id="jobs" class="row">
       <div class="col-12"></div>
     </div>
-  </div>
 
-  <!-- create form -->
+    <!-- create form -->
+    <form onsubmit="app.controllers.jobControllers.addJob(event)" class="col-5">
 
-  <div class="form-group">
-    <label for="career"></label>
-    <input type="text" class="form-control" name="career" id="career" placeholder="type in career">
-  </div>
+      <div class="form-group">
+        <label for="career"></label>
+        <input type="text" class="form-control" name="career" id="career" placeholder="type in career">
+      </div>
 
-  <div class="form-group">
-    <label for="salary"></label>
-    <input type="text" class="form-control" name="salary" id="salary" placeholder="type in salary">
-  </div>
+      <div class="form-group">
+        <label for="salary"></label>
+        <input type="text" class="form-control" name="salary" id="salary" placeholder="type in salary">
+      </div>
 
-  <div class="form-group">
-    <label for="location"></label>
-    <input type="text" class="form-control" name="location" id="location" placeholder="type in location">
-  </div>
+      <div class="form-group">
+        <label for="location"></label>
+        <input type="text" class="form-control" name="location" id="location" placeholder="type in location">
+      </div>
 
-  <div class="form-group">
-    <label for="imgUrl"></label>
-    <input type="text" class="form-control" name="imgUrl" id="imgUrl" placeholder="type in imgUrl">
-  </div>
+      <div class="form-group">
+        <label for="imgUrl"></label>
+        <input type="text" class="form-control" name="imgUrl" id="imgUrl" placeholder="type in imgUrl">
+      </div>
 
-  <div class="form-group">
-    <label for="description"></label>
-    <input type="text" class="form-control" name="description" id="description" placeholder="type in description">
+      <div class="form-group">
+        <label for="description"></label>
+        <input type="text" class="form-control" name="description" id="description" placeholder="type in description">
+      </div>
+      <button type="submit" class="btn btn-primary">Job desire</button>
+    </form>
   </div>
-  <button type="submit" class="btn btn-primary">Job desire</button>
 
   <script src="app/main.js" type="module"></script>
 </body>

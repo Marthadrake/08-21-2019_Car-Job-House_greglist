@@ -1,11 +1,11 @@
-import JobServices from "../Services/JobServices.js"
+import JobServices from "../services/JobServices.js"
 
-let _jobService = new JobServices()
+let _jobServices = new JobServices()
 
 function _draw() {
   // make template in the html next
   let template = ``
-  let jobs = _jobService.Jobs
+  let jobs = _jobServices.Jobs
 
   jobs.forEach((job, index) => {
     template += job.template
@@ -19,13 +19,26 @@ export default class JobControllers {
     console.log("hello from job contoller")
 
   }
+
   deleteJob(id) {
-    _jobService.deleteJob(id)
-    _draw()
-  }
+    _jobServices.deleteJob(index)
+  _draw()
+} 
 
   addJob(event) {
-    event.preventDefault()
+  event.preventDefault()
+
+let form = event.target
+  newJob = {
+career: form.career.value,
+  salary: form.salary.value,
+  location: form.location.value,
+  imgUrl: form.imgUrl.value,
+  description: form.discription.value, 
+   
+          
+  _jobServices.addJob(newJob)
+raw()
 
   }
 }

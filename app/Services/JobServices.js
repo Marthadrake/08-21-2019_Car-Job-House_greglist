@@ -1,4 +1,4 @@
-import Job from "../Models/Job.js";
+import Job from "../models/Job.js";
 
 //added after data in job.js
 //go to controller draw the state
@@ -19,6 +19,21 @@ export default class JobServices {
         _state.jobs.splice(i, 1)
       }
 
+    })
+  }
+    
+    addJob(newJob){
+      _state.jobs.push(new Job(newJob))
+      console.log(_state.jobs)
+    }
+    constructor(){
+      console.log("hello from service")
+      console.log(_state.jobs)
+      
+    }
+    
+    get JobServices({
+      return _state.jobs.map(job => new Job(job))
     })
   }
 }
