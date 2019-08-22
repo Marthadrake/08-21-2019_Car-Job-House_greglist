@@ -1,22 +1,31 @@
 import JobServices from "../Services/JobServices.js"
 
-let _jobServices = new JobServices()
+let _jobService = new JobServices()
 
 function _draw() {
   // make template in the html next
-  let template = ''
-  let Job = _jobServices.Job
+  let template = ``
+  let jobs = _jobService.Jobs
 
-  Job.forEach((job, index) => {
-    template += Job.template
+  jobs.forEach((job, index) => {
+    template += job.template
   })
-  debugger
-  document.querySelector("#Job").innerHTML = template
+
+  document.querySelector("#jobs").innerHTML = template
 }
 
 export default class JobControllers {
   constructor() {
     console.log("hello from job contoller")
-    _draw();
+
+  }
+  deleteJob(id) {
+    _jobService.deleteJob(id)
+    _draw()
+  }
+
+  addJob(event) {
+    event.preventDefault()
+
   }
 }

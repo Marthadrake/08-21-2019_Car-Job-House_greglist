@@ -3,7 +3,7 @@ import Job from "../Models/Job.js";
 //added after data in job.js
 //go to controller draw the state
 let _state = {
-  Jobs: [new Job({
+  jobs: [new Job({
     career: "Web Design",
     salary: 0,
     location: "Boston",
@@ -13,8 +13,12 @@ let _state = {
 }
 
 export default class JobServices {
-  constructor() {
-    console.log("hello from services")
-  }
+  deleteJob(id) {
+    _state.jobs.forEach(job, i) => {
+      if (job._id == id) {
+        _state.jobs.splice(i, 1)
+      }
 
+    })
+  }
 }
